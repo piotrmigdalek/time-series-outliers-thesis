@@ -13,13 +13,24 @@ Praca przedstawia wybrane techniki detekcji oraz modelowania obserwacji odstają
 The thesis discusses selected outlier detection methods in time series data. The core of presented work consists of practical analysis of real-world problems from different fields of science, industry and business using statistical and algorithmic approaches. The thesis comprises of necessary theoretical background followed by chapters covering particular types of anomalies: interventions, point outliers and sequences.
 
 ## Repo contents
-* Compiled LaTeX file with thesis can be viewied via outliers_thesis.pdf. It includes all theory and studies and research results with documentation carried out in R package.
+* Compiled LaTeX file with thesis can be viewied via outliers_thesis.pdf. It includes all theory and studies and research results with documentation carried out in <tt>R</tt> package.
 
-* First chapter consists of basic theory concerning time series, autocorrelation, ARIMA modelling, useful statistical tests and time series decomposition techniques. All graphical examples were prepared by me using ggplot2, forecast and patchwork libraries.
+* First chapter consists of basic theory concerning time series, autocorrelation, ARIMA modelling, useful statistical tests and time series decomposition techniques. All graphical examples were prepared by me using <tt>ggplot2</tt>, <tt>forecast</tt> and <tt>patchwork</tt> libraries.
 
-* Second chapter is focused on parametrizing various outlier effects using intervention models in order to detect and incorporate them intto regression model with ARIMA errors. I prepared vast **forecasting analysis of CO2 emission in Poland** -- using mainly ARIMAX, ARIMA and ETS models also prepared solely in R with help of forecast, tsoutliers and ggplot2 libraries. 
+* Second chapter is focused on parametrizing various outlier effects using intervention models in order to detect and incorporate them intto regression model with ARIMA errors. I prepared vast **forecasting analysis of CO2 emission in Poland** – using mainly ARIMAX, ARIMA and ETS models also prepared solely in <tt>R</tt> with help of <tt>forecast</tt>, <tt>tsoutliers</tt> and <tt>ggplot2</tt> libraries. 
 
-* Third chapter introduces numerous **point outlier detection techniques in univariate streaming data**. 
+* Third chapter introduces numerous **point outlier detection techniques in univariate streaming data**. I made comparison of different detection methods implemented in various <tt>R</tt> libraries and also designed my own methods. I used:
 
-* Fourth chapter has a little bit pattern mining twist to it, because it extends outliers taxonomy to sequences. I introduce simple brute force approach, its heuristic modification HOT-SAX as well as whole new data mining structure -- Matrix Profile. 
+Algorithm | Description | Implementation
+------------- | ------------- | -------------
+<tt>tso</tt> | Chen and Liu iterative procedure of simultaneous parameter estimation and outlier detection | <tt>tsoutliers</tt>
+<tt>locate.outliers</tt>  | Statistical test based on ARIMA residuals | <tt>tsoutliers</tt>
+<tt>tsoutliers</tt>  | STL decomposition + Tukey box plot rule for far out values | <tt>forecast</tt>
+<tt>OSWM</tt>  | STL decomposition + moving average/median thresholding – one-sided | mine
+<tt>TSWM</tt>  | STL decomposition + moving average/median thresholding – two-sided | mine
+<tt>detect_outliers</tt>  | STL decomposition + GMM + clustering | <tt>tsrobprep</tt>
+<tt>ad_vec</tt> | Modified STL decompsotion + Rosner test | <tt>AnomalyDetection</tt>
+
+
+* Fourth chapter has a little bit pattern mining twist to it, because it extends outliers taxonomy to sequences. I introduced simple brute force approach, its heuristic modification HOT-SAX as well as whole new data mining structure – Matrix Profile. This approaches are evaluated in **anomalous heartbeat detection in ECG data** case study using mainly <tt>R</tt> libraries <tt>jmotif</tt> and <tt>tsmp</tt>.
 
