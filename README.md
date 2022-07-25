@@ -16,14 +16,6 @@ The thesis discusses selected outlier detection methods in time series data. The
 * Files in this repo contain all theory, studies, research, documentation and results carried out in <tt>R</tt> package.
   * *outliers_thesis.pdf* – compiled thesis written in LaTeX (in Polish)
   * *outliers_presentation.pdf* – presentation of most significant topics/results concerning presented work
-  * **chapter 2**
-    * *CO2.R* – code used for CO2 emission analysis
-  * **chapter 3**
-    * *benchmarks.R* – code used for point anomalies detection comparison using precison, recall and F1 metrics
-    * *OSWM.Rd* – documentation of custom OSWM function
-    * *TSWM.Rd* – documentation of custom TSWM function
-  * **chapter 4**
-    * *ECG.R* – code used for ECG anomalous heartbeat detection and comparison analysis
 
 * First chapter consists of basic theory concerning time series, autocorrelation, ARIMA modelling, useful statistical tests and time series decomposition techniques. All graphical examples were prepared by me using <tt>ggplot2</tt>, <tt>forecast</tt> and <tt>patchwork</tt> libraries.
 
