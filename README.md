@@ -19,7 +19,7 @@ The thesis discusses selected outlier detection methods in time series data. The
 
 * First chapter consists of basic theory concerning time series, autocorrelation, ARIMA modelling, useful statistical tests and time series decomposition techniques. All graphical examples were prepared by me using <tt>ggplot2</tt>, <tt>forecast</tt> and <tt>patchwork</tt> libraries.
 
-* Second chapter is focused on parametrizing various outlier effects using intervention models in order to detect and incorporate them intto regression model with ARIMA errors. I prepared vast **forecasting analysis of CO2 emission in Poland** – using mainly ARIMAX, ARIMA and ETS models also prepared solely in <tt>R</tt> with help of <tt>forecast</tt>, <tt>tsoutliers</tt> and <tt>ggplot2</tt> libraries. 
+* Second chapter is focused on parametrizing various outlier effects using intervention models in order to detect and incorporate them into regression model with ARIMA errors. I prepared vast **forecasting analysis of CO2 emission in Poland** – using mainly ARIMAX, ARIMA and ETS models also prepared solely in <tt>R</tt> with help of <tt>forecast</tt>, <tt>tsoutliers</tt> and <tt>ggplot2</tt> libraries. 
 
 * Third chapter introduces numerous **point outlier detection techniques in univariate streaming data**. I made comparison of different detection methods implemented in various <tt>R</tt> libraries and also designed my own methods. I used:
 
@@ -34,5 +34,4 @@ Algorithm | Description | Implementation
 <tt>ad_vec</tt> | Modified STL decomposition + Rosner test | <tt>AnomalyDetection</tt>
 
 
-* Fourth chapter has a little bit pattern mining twist to it, because it extends outliers taxonomy to sequences. I introduced simple brute force approach, its heuristic modification HOT-SAX as well as whole new data mining structure – Matrix Profile. This approaches are evaluated in **anomalous heartbeat detection in ECG data** case study using mainly <tt>R</tt> libraries <tt>jmotif</tt> and <tt>tsmp</tt>.
-
+* Fourth chapter has a little bit of a pattern mining twist to it, because it extends outliers taxonomy to sequences. I discussed simple brute force approach, its heuristic modification HOT-SAX as well as whole recently introduced data mining structure – Matrix Profile. These approaches are evaluated in **anomalous heartbeat detection in ECG data** case study using mainly <tt>R</tt> libraries <tt>jmotif</tt> and <tt>tsmp</tt>.
